@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
 <title>Flores amarillas — Universo 3D</title>
 
@@ -175,9 +175,12 @@ canvas{
 #abrir3d{border:1px solid #fff0b5;border-radius:60px;padding:16px 26px;background:linear-gradient(120deg,#fff0a9,#ffc438);color:#4d2b00;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 0 40px rgba(255,207,71,.35)}
 .detallesLindos{position:fixed;inset:0;z-index:11;overflow:hidden;pointer-events:none}.detalleLindo{position:absolute;opacity:.72;filter:drop-shadow(0 0 14px rgba(255,211,71,.72));animation:detalleFlotando 6s ease-in-out infinite}.detalleLindo:nth-child(1){left:4%;top:19%;font-size:32px}.detalleLindo:nth-child(2){right:5%;top:25%;font-size:25px;animation-delay:-1.4s}.detalleLindo:nth-child(3){left:8%;bottom:17%;font-size:22px;animation-delay:-2.8s}.detalleLindo:nth-child(4){right:8%;bottom:19%;font-size:35px;animation-delay:-4.1s}.detalleLindo:nth-child(5){left:21%;top:12%;font-size:17px;animation-delay:-3.2s}.detalleLindo:nth-child(6){right:22%;top:13%;font-size:18px;animation-delay:-.8s}
 .continuar3d{position:fixed;z-index:50;left:50%;bottom:max(22px,env(safe-area-inset-bottom));width:min(92%,570px);transform:translate(-50%,35px) scale(.94);padding:14px 17px 13px;text-align:center;border:1px solid rgba(255,239,174,.68);border-radius:27px;background:linear-gradient(145deg,rgba(45,27,9,.91),rgba(10,6,18,.94));box-shadow:0 0 55px rgba(255,205,53,.3),inset 0 1px 0 rgba(255,255,255,.2);backdrop-filter:blur(13px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s,visibility .8s,transform .8s}.continuar3d.visible{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0) scale(1)}.continuar3d p{margin:0 0 9px;color:#fff0bf;font-size:clamp(11px,1.8vw,14px);line-height:1.45;letter-spacing:.5px}.continuar3d button{border:1px solid #fff4c6;border-radius:999px;padding:14px 25px;background:linear-gradient(120deg,#fff3ad,#ffc22e);color:#4a2800;font-size:clamp(14px,2vw,17px);font-weight:800;cursor:pointer;box-shadow:0 0 31px rgba(255,207,60,.38);transition:transform .25s,box-shadow .25s}.continuar3d button:hover{transform:translateY(-3px) scale(1.025);box-shadow:0 0 48px rgba(255,219,92,.58)}body.viaje3d-activo .controles{bottom:112px}
+.zoomMovil{position:fixed;z-index:55;right:max(12px,env(safe-area-inset-right));top:50%;display:none;flex-direction:column;align-items:center;gap:7px;transform:translateY(-50%);padding:9px 7px;border:1px solid rgba(255,226,126,.42);border-radius:25px;background:rgba(8,5,15,.72);box-shadow:0 0 28px rgba(255,202,47,.18);backdrop-filter:blur(10px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .5s,visibility .5s}.zoomMovil strong{color:#ffe9a5;font-size:8px;letter-spacing:1.3px;writing-mode:vertical-rl;transform:rotate(180deg)}.zoomMovil button{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(255,237,173,.58);border-radius:50%;background:linear-gradient(145deg,rgba(255,226,119,.22),rgba(34,20,18,.82));color:#fff4bd;font-size:22px;font-weight:bold;box-shadow:0 0 16px rgba(255,208,62,.16);touch-action:manipulation}.zoomMovil button:active{transform:scale(.9);background:rgba(255,201,55,.35)}body.viaje3d-activo .zoomMovil{opacity:1;visibility:visible;pointer-events:auto}
+.ayudaZoom{position:fixed;z-index:54;left:50%;top:20%;transform:translate(-50%,-12px);width:max-content;max-width:82vw;padding:9px 14px;border:1px solid rgba(255,230,145,.4);border-radius:999px;background:rgba(10,6,17,.72);color:#fff0b5;font-size:11px;font-weight:bold;letter-spacing:.5px;text-align:center;box-shadow:0 0 24px rgba(255,206,54,.18);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .6s,transform .6s,visibility .6s}.ayudaZoom.visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
 @keyframes florecer{50%{transform:translateY(-12px) rotate(4deg)}}
 @keyframes detalleFlotando{0%,100%{transform:translateY(0) rotate(-7deg) scale(.92);opacity:.42}50%{transform:translateY(-22px) rotate(8deg) scale(1.12);opacity:.9}}
-@media(max-width:700px){.detalleLindo:nth-child(1),.detalleLindo:nth-child(4){font-size:24px}.continuar3d{bottom:max(13px,env(safe-area-inset-bottom));padding:11px 12px}.continuar3d button{padding:12px 20px}body.viaje3d-activo .controles{bottom:101px;font-size:9px}}
+@media(max-width:700px){.titulo{top:max(15px,env(safe-area-inset-top));padding:0 40px}.titulo h1{font-size:clamp(20px,6vw,29px);letter-spacing:3px;line-height:1.12}.titulo p{font-size:9px;letter-spacing:1.3px;line-height:1.45}.detalleLindo:nth-child(1),.detalleLindo:nth-child(4){font-size:24px}.continuar3d{bottom:max(10px,env(safe-area-inset-bottom));padding:10px 11px;width:min(94%,480px)}.continuar3d p{font-size:10px;margin-bottom:7px}.continuar3d button{padding:12px 20px}.zoomMovil{display:flex}body.viaje3d-activo .controles{bottom:91px;width:78%;font-size:8px;line-height:1.55;letter-spacing:.8px}.mensajeCentral{top:72%;font-size:12px;letter-spacing:2px}}
+@media(max-width:390px){.titulo{padding:0 28px}.titulo h1{font-size:20px}.zoomMovil{right:7px;transform:translateY(-45%) scale(.9)}body.viaje3d-activo .controles{width:74%}}
 @media(prefers-reduced-motion:reduce){.detalleLindo{animation:none}}
 </style>
 
@@ -217,6 +220,13 @@ canvas{
 
 <div class="vineta"></div>
 <div class="scanlines"></div>
+<div id="ayudaZoom" class="ayudaZoom">Separa dos dedos para acercarte · júntalos para alejarte</div>
+<div id="zoomMovil" class="zoomMovil" aria-label="Controles de zoom">
+    <button id="zoomAcercar" type="button" aria-label="Acercar">+</button>
+    <button id="zoomRestablecer" type="button" aria-label="Restablecer vista">◎</button>
+    <button id="zoomAlejar" type="button" aria-label="Alejar">−</button>
+    <strong>ZOOM</strong>
+</div>
 <div id="continuar3d" class="continuar3d" aria-hidden="true"><p>Este universo era solo una parte del detalle. Todavía queda una última sorpresa.</p><button id="continuarViaje3d" type="button">🌻 Continuar el viaje</button></div>
 
 <script type="module">
@@ -248,7 +258,7 @@ escena.fog = new THREE.FogExp2(
 );
 
 const camara = new THREE.PerspectiveCamera(
-    52,
+    ES_MOVIL ? 62 : 52,
     innerWidth / innerHeight,
     0.1,
     600
@@ -1862,6 +1872,22 @@ function lanzarExplosion(){
    CONTROLES CON MOUSE Y DEDO
 ========================================================= */
 
+let zoomObjetivo=camara.position.z;
+const ZOOM_MINIMO=ES_MOVIL?5.4:4.5;
+const ZOOM_MAXIMO=35;
+const punterosActivos=new Map();
+let distanciaPinza=0;
+
+function limitarZoom(valor){
+    return Math.max(ZOOM_MINIMO,Math.min(ZOOM_MAXIMO,valor));
+}
+
+function distanciaEntreDedos(){
+    const puntos=[...punterosActivos.values()];
+    if(puntos.length<2)return 0;
+    return Math.hypot(puntos[0].x-puntos[1].x,puntos[0].y-puntos[1].y);
+}
+
 let arrastrando = false;
 
 let ultimoX = 0;
@@ -1876,15 +1902,23 @@ renderer.domElement.addEventListener(
     "pointerdown",
     evento=>{
 
-        arrastrando = true;
-
-        ultimoX = evento.clientX;
-        ultimoY = evento.clientY;
+        punterosActivos.set(evento.pointerId,{x:evento.clientX,y:evento.clientY});
 
         renderer.domElement
             .setPointerCapture(
                 evento.pointerId
             );
+
+        if(punterosActivos.size>=2){
+            arrastrando=false;
+            distanciaPinza=distanciaEntreDedos();
+            return;
+        }
+
+        arrastrando = true;
+
+        ultimoX = evento.clientX;
+        ultimoY = evento.clientY;
 
         const ahora = performance.now();
 
@@ -1900,6 +1934,20 @@ renderer.domElement.addEventListener(
 renderer.domElement.addEventListener(
     "pointermove",
     evento=>{
+
+        if(punterosActivos.has(evento.pointerId)){
+            punterosActivos.set(evento.pointerId,{x:evento.clientX,y:evento.clientY});
+        }
+
+        if(punterosActivos.size>=2){
+            const distanciaActual=distanciaEntreDedos();
+            if(distanciaPinza>0){
+                const cambio=distanciaActual-distanciaPinza;
+                zoomObjetivo=limitarZoom(zoomObjetivo-cambio*.021);
+            }
+            distanciaPinza=distanciaActual;
+            return;
+        }
 
         if(!arrastrando) return;
 
@@ -1940,9 +1988,19 @@ renderer.domElement.addEventListener(
     }
 );
 
-function terminarArrastre(){
+function terminarArrastre(evento){
 
-    arrastrando = false;
+    punterosActivos.delete(evento.pointerId);
+    distanciaPinza=0;
+
+    if(punterosActivos.size===1){
+        const punto=[...punterosActivos.values()][0];
+        ultimoX=punto.x;
+        ultimoY=punto.y;
+        arrastrando=true;
+    }else{
+        arrastrando=false;
+    }
 }
 
 renderer.domElement.addEventListener(
@@ -1960,17 +2018,41 @@ renderer.domElement.addEventListener(
     lanzarExplosion
 );
 
-let zoomObjetivo=camara.position.z;
 let inicioVuelo3d = -Infinity;
 let vuelo3d = false;
 let avisoContinuarProgramado=false;
+
+if(ES_MOVIL){
+    document.querySelector(".controles").innerHTML=
+        "DESLIZA PARA GIRAR · USA DOS DEDOS O LOS BOTONES PARA HACER ZOOM<br>"+
+        "<span>DOBLE TOQUE PARA LIBERAR LAS FLORES ✨</span>";
+}
+
+document.getElementById("zoomAcercar").addEventListener("click",()=>{
+    zoomObjetivo=limitarZoom(zoomObjetivo-1.8);
+});
+
+document.getElementById("zoomAlejar").addEventListener("click",()=>{
+    zoomObjetivo=limitarZoom(zoomObjetivo+1.8);
+});
+
+document.getElementById("zoomRestablecer").addEventListener("click",()=>{
+    zoomObjetivo=ES_MOVIL?11.2:8.5;
+    universo.rotation.x=0;
+});
+
 document.getElementById("abrir3d").addEventListener("click",()=>{
     document.getElementById("entrada3d").classList.add("oculto");
     document.body.classList.add("viaje3d-activo");
     inicioVuelo3d=performance.now();
     vuelo3d=true;
-    zoomObjetivo=6.6;
+    zoomObjetivo=ES_MOVIL?11.2:6.6;
     lanzarExplosion();
+    if(ES_MOVIL){
+        const ayuda=document.getElementById("ayudaZoom");
+        ayuda.classList.add("visible");
+        setTimeout(()=>ayuda.classList.remove("visible"),5200);
+    }
     if(!avisoContinuarProgramado){
         avisoContinuarProgramado=true;
         setTimeout(()=>{
@@ -1997,17 +2079,9 @@ renderer.domElement.addEventListener(
 
         evento.preventDefault();
 
-        zoomObjetivo +=
-            evento.deltaY * .010;
-
-        zoomObjetivo =
-            Math.max(
-                4.5,
-                Math.min(
-                    35,
-                    zoomObjetivo
-                )
-            );
+        zoomObjetivo=limitarZoom(
+            zoomObjetivo+evento.deltaY*.010
+        );
     },
     {passive:false}
 );
@@ -2407,6 +2481,11 @@ function ajustarPantalla(){
 
     camara.aspect =
         ancho / alto;
+
+    camara.fov =
+        ancho < 750
+            ? (alto > ancho ? 62 : 56)
+            : 52;
 
     camara.updateProjectionMatrix();
 
