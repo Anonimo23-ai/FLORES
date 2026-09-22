@@ -1,0 +1,32 @@
+FLORES AMARILLAS · UN VIAJE PROFUNDO
+
+1) Extrae el ZIP completo y abre index.html con Edge o Chrome.
+2) Toca el girasol o «Toca aquí y entra al universo».
+3) Primero se acelera la nave; después, pulsa «Atravesar el portal».
+4) Toca los planetas y entra al universo 3D de flores amarillas.
+5) Después de explorarlo unos segundos aparecerá «Continuar el viaje».
+6) El viaje regresará al jardín y seguirá hasta el gran ramo final.
+
+MÚSICA
+El paquete ya incluye el audio que entregaste, convertido a MP3:
+  assets/audio/FloresAmarillas.mp3
+La canción empieza con el primer clic y continúa sin cortarse mientras se abre
+el universo 3D dentro del mismo viaje.
+El navegador puede pedir un clic para reproducirla.
+
+ORIGINAL 3D
+El archivo íntegro que compartiste permanece en:
+  extras/universo-3d-original.html
+Ese archivo usa Three.js y complementos desde jsDelivr: en la red del trabajo
+podrían estar bloqueados, por lo que esta edición principal usa Canvas local
+con estrellas en perspectiva, un gran ramo central, mini ramos, órbitas y flores sin bibliotecas externas.
+
+No se necesita OneCompiler, conexión a internet ni servidor para el recorrido principal.
+
+EDICIÓN 3D ADICIONAL DEL CÓDIGO ENTREGADO
+  extras/universo-3d-flores-amarillas.html
+Esta edición usa exactamente el universo 3D entregado: incluye la entrada con
+girasol, el acercamiento a la escena, vuelo de estrellas, un ramo abundante en
+el centro, decenas de flores flotantes y detalles dorados. Tras unos segundos
+aparece el botón visible «Continuar el viaje», que lleva al jardín y al final.
+Requiere conexión autorizada a jsDelivr para descargar Three.js.
